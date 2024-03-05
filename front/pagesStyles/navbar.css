@@ -1,0 +1,33 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+
+.logo {
+  width: 200px;
+  font-family: "Macondo Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 30px;
+  margin-left: 20px;
+}
+ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+.nav-link {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}

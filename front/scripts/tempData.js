@@ -7,7 +7,7 @@ const tempData = [
     genre: ["Action", "Adventure", "Comedy"],
     rate: 7.7,
     poster:
-      "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg",
+      "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTeV52YwTe6UOPw2JhgmV_lvjb2E2llMwPR4ulxNT7rPdgq_R3y",
   },
   {
     title: "Star Wars: Episode IV - A New Hope",
@@ -17,7 +17,7 @@ const tempData = [
     genre: ["Action", "Adventure", "Fantasy", "Sci-Fi"],
     rate: 8.7,
     poster:
-      "https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_SX300.jpg",
+      "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSKTW3jUyO26OzUfoQnFRdIcH_9NgxuU2yzeFUMmJWqBCtPP9lF",
   },
   {
     title: "The Lord of the Rings: The Fellowship of the Ring",
@@ -27,6 +27,26 @@ const tempData = [
     genre: ["Action", "Adventure", "Drama", "Fantasy"],
     rate: 8.8,
     poster:
-      "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUrYu5XxAifo5b7XV5wVnd7zGFjYJP9V39b6vbChQue04j4b7-",
+  },
+  {
+    title: "Forrest Gump",
+    year: 1994,
+    director: "Robert Zemeckis",
+    duration: "2h 58min",
+    genre: ["Drama"],
+    rate: 8.8,
+    poster:
+      "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSgJaxEFJxdwh2SP1sAI92IQgaThjvJM6XSd1G2YEEqVwjqNnVF",
+  },
+  {
+    title: "The Shawshank Redemption",
+    year: 1994,
+    duration: "2h 58min",
+    director: "Frank Darabont",
+    genre: ["Drama"],
+    rate: 9.3,
+    poster:
+      "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTv45qUNctbXnWYx3U-2nHwbIR7WGQKZQPMCayuvaq3ZLO8XlEA",
   },
 ];
