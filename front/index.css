@@ -5,6 +5,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 body::after {
   content: "";
@@ -31,30 +32,63 @@ body::after {
   margin-left: 50px;
   position: relative;
 }
+
 .containerLines {
   display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 80px 0 0 50px;
 }
 .firstLine {
   color: white;
-  font-size: 48px;
-  /* transform: translate(70px, -20px); */
+  font-size: 38px;
+  transform: translate(70px, -20px);
 }
 .secondLine {
   color: white;
   font-family: "Macondo Swash Caps", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: 80px;
+  font-size: 70px;
   transform: rotate(359deg);
-  margin: 48px 0 0 -90px;
+  margin: -60px 0 0 90px;
 }
 .thirdLine {
   color: white;
-  font-size: 48px;
-  /* transform: translate(-100px, 80px); */
+  font-size: 38px;
+  transform: translateX(190px) translateY(-20px);
 }
 .fourthLine {
   color: white;
-  font-size: 48px;
-  margin: 250px 0 0 -290px;
+  font-size: 38px;
+  transform: translateX(270px) translateY(-40px);
+}
+
+.firstLine:hover,
+.secondLine:hover,
+.thirdLine:hover,
+.fourthLine:hover {
+  animation: shadow-drop-center 0.4s linear both;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.55);
+}
+
+@keyframes shadow-drop-center {
+  0% {
+    text-shadow: 0 0 0 0 transparent;
+  }
+  100% {
+    text-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.55);
+  }
+}
+.textHome {
+  opacity: 0;
+  transform: translateY(20px) translateX(-20px);
+  transition: opacity 0.7s ease-in-out, transform 1.5s ease-in-out;
+  height: 70%;
+}
+
+.textHome.show {
+  opacity: 1;
+  transform: translateY(0);
 }
