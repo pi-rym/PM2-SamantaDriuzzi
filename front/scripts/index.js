@@ -32,7 +32,7 @@ const cardMovie = (data) => {
     card.appendChild(nameParagraph);
 
     const additionalImage = document.createElement("img");
-    additionalImage.src = additionalImages[index % additionalImages.length]; // Cicla a través de las imágenes
+    additionalImage.src = additionalImages[index % additionalImages.length];
     additionalImage.classList.add("additional-image");
     containerCard.appendChild(additionalImage);
 
