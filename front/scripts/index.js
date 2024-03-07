@@ -1,22 +1,29 @@
 const movieCardsContainer = document.getElementById("movieCardsContainer");
 
+const additionalImages = [
+  "../assets/number1.png",
+  "../assets/number2.png",
+  "../assets/number3.png",
+  "../assets/number4.png",
+  "../assets/number5.png",
+];
+
 $.get("https://students-api.2.us-1.fl0.io/movies", (data) => {
   cardMovie(data);
 });
 
 const cardMovie = (data) => {
   data.forEach((movie, index) => {
+    const containerCard = document.createElement("div");
+    containerCard.classList.add("containerCard");
+
     const card = document.createElement("div");
     card.classList.add("card");
-
-    const numberContainer = document.createElement("span");
-    numberContainer.classList.add("number");
-    numberContainer.textContent = index + 1;
-    card.appendChild(numberContainer);
 
     const img = document.createElement("img");
     img.src = movie.poster;
     img.alt = `${movie.title} Poster`;
+    img.classList.add("poster");
     card.appendChild(img);
 
     const nameParagraph = document.createElement("p");
@@ -24,6 +31,13 @@ const cardMovie = (data) => {
     nameParagraph.classList.add("name");
     card.appendChild(nameParagraph);
 
-    movieCardsContainer.appendChild(card);
+    const additionalImage = document.createElement("img");
+    additionalImage.src = additionalImages[index % additionalImages.length]; // Cicla a través de las imágenes
+    additionalImage.classList.add("additional-image");
+    containerCard.appendChild(additionalImage);
+
+    containerCard.appendChild(card);
+
+    movieCardsContainer.appendChild(containerCard);
   });
 };

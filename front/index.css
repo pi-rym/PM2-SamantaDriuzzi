@@ -84,7 +84,7 @@ body::after {
 .textHome {
   opacity: 0;
   transform: translateY(20px) translateX(-20px);
-  transition: opacity 0.7s ease-in-out, transform 1.5s ease-in-out;
+  transition: opacity 3s ease-in-out, transform 1.5s ease-in-out;
   height: 70%;
 }
 
