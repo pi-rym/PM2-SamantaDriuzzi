@@ -1,0 +1,6 @@
+.fondo-error {
+  background-image: url("../../assets/fondo404.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
