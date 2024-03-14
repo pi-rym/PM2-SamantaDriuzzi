@@ -15,7 +15,7 @@ body {
 .containerCard {
   width: 400px;
 }
-.card {
+.cardMovie {
   width: 200px;
   height: 300px;
   position: relative;
@@ -23,7 +23,7 @@ body {
   display: inline-block;
   transition: all 0.3s ease-in-out;
 }
-.card > .poster {
+.cardMovie > .poster {
   border-radius: 8px;
   width: 100%;
   height: auto;
@@ -33,7 +33,7 @@ body {
   transition: opacity 0.3s ease;
 }
 
-.name {
+.nameMovie {
   color: white;
   font-size: 18px;
   text-align: center;
@@ -41,7 +41,7 @@ body {
   margin-top: 30px;
 }
 
-.additional-image {
+.additionalImage {
   position: relative;
   bottom: 0;
   left: 50px;
@@ -52,13 +52,13 @@ body {
   transition: opacity 0.3s ease;
 }
 
-.card:hover .additional-image {
+.cardMovie:hover .additionalImage {
   opacity: 0;
 }
-.card:hover .poster {
+.cardMovie:hover .poster {
   opacity: 1;
 }
-.card:hover {
+.cardMovie:hover {
   transform: scale(1.7);
 }
 .error {

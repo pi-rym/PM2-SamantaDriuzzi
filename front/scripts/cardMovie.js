@@ -14,7 +14,7 @@ const cardMovie = (data) => {
     containerCard.classList.add("containerCard");
 
     const card = document.createElement("div");
-    card.classList.add("card");
+    card.classList.add("cardMovie");
 
     const img = document.createElement("img");
     img.src = movie.poster;
@@ -24,12 +24,12 @@ const cardMovie = (data) => {
 
     const nameParagraph = document.createElement("p");
     nameParagraph.textContent = movie.title;
-    nameParagraph.classList.add("name");
+    nameParagraph.classList.add("nameMovie");
     card.appendChild(nameParagraph);
 
     const additionalImage = document.createElement("img");
     additionalImage.src = additionalImages[index % additionalImages.length];
-    additionalImage.classList.add("additional-image");
+    additionalImage.classList.add("additionalImage");
     containerCard.appendChild(additionalImage);
 
     containerCard.appendChild(card);
