@@ -15,9 +15,7 @@ const axios = require("axios");
 
 const getMovie = async () => {
   try {
-    const response = await axios.get(
-      "https://students-api.up.railway.app/movi"
-    );
+    const response = await axios.get("http://localhost:3000/movies");
     cardMovie(response.data);
   } catch (err) {
     //si el error es 404

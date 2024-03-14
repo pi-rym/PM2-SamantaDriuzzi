@@ -219,31 +219,15 @@
        
       </div>
   <!-- FOOTER CON BOOTSTRAP -->
-  <div class="containerFooter">
-    <footer class="py-2 my-2">
-      <ul class="nav justify-content-center border-bottom pb-1 mb-1">
-        <li class="nav-item">
-          <a
-            href="https://www.linkedin.com/in/samanta-driuzzi/"
-            target="_blank"
-            class="nav-link px-2 text-light-emphasis"
-            >Linkedin</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            href="https://github.com/SamantaDriuzzi"
-            target="_blank"
-            class="nav-link px-2 text-light-emphasis"
-            >GitHub</a
-          >
-        </li>
-      </ul>
-      <p class="text-center text-light-emphasis">
-        © Creado por Samanta Driuzzi 2024 Alumna Henry, Cohorte 48.
-      </p>
-    </footer>
-  </div>
+      <div id="footer"></div>
+        <script>
+          fetch('footer.html')
+            .then(response => response.text())
+            .then(html => {
+              document.getElementById('footer').innerHTML = html;
+            });
+        </script>
+      </div>
     </section>
   </body>
 </html>
