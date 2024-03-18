@@ -1,17 +1,15 @@
-const axios = require("axios");
-const Movie = require("./claseMovie");
-require("dotenv").config();
-const { BASE_URL } = process.env;
+const MovieC = require("./claseMovie");
+const Movie = require("../models/Movie");
 
 module.exports = {
   getMoviesService: async () => {
     try {
-      const response = await axios.get(BASE_URL);
-      const moviesData = response.data;
+      const response = await Movie.find();
+      const moviesData = response;
 
       const movies = moviesData.map(
         ({ title, year, director, duration, genre, rate, poster }) =>
-          new Movie(title, year, director, duration, genre, rate, poster)
+          new MovieC(title, year, director, duration, genre, rate, poster)
       );
 
       return movies;

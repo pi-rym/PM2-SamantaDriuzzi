@@ -1,4 +1,4 @@
-class Movie {
+class MovieC {
   constructor(title, year, director, duration, genre, rate, poster) {
     if (!title || !poster || !director) {
       throw new Error("Title, poster, and director are required.");
@@ -13,4 +13,4 @@ class Movie {
     this.poster = poster;
   }
 }
-module.exports = Movie;
+module.exports = MovieC;
