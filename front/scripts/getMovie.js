@@ -2,17 +2,6 @@ const cardMovie = require("./cardMovie");
 
 const axios = require("axios");
 
-// const promise = axios.get(" https://students-api.up.railway.app/movies");
-//
-// promise
-//   .then((response) => {
-//     cardMovie(response.data);
-//   })
-//   .cath((err) => {
-//     console.error(err);
-//     alert("Error: " + err.message);
-//   });
-
 const getMovie = async () => {
   try {
     const response = await axios.get("http://localhost:3000/movies");

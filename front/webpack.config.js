@@ -1,8 +1,12 @@
 module.exports = {
-  entry: "./scripts/index.js",
+  entry: {
+    index: "./scripts/index.js",
+    btnClear: "./scripts/createMovie/btnClear.js",
+    btnSubmit: "./scripts/createMovie/btnSubmit.js",
+  },
   output: {
     path: __dirname + "/public",
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
   },
   mode: "development",
 };

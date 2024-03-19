@@ -39,7 +39,7 @@
  
          <!-- FORMULARIO CREAR PELÍCULA -->
           <div class="col-ms-4 col-lg-8 mt-2">
-            <form class="bg-dark p-4 rounded">
+            <form id="formContainer" class="bg-dark p-4 rounded">
               <h3 class="mb-3 d-flex justify-content-center">AGREGÁ TU PROPIA PELÍCULA AL TOP 5!</h3>
               <div class="row">
                 <div class="col-md-6">
@@ -78,11 +78,11 @@
                 </div>
 
                 <div class="col-md-6">
-                  <label for="Duration" class="form-label">Duración</label>
+                  <label for="duration" class="form-label">Duración</label>
                   <input
                     type="text"
                     class="form-control form-control-sm"
-                    id="Duration"
+                    id="duration"
                     placeholder="2h 16min"
                   />
                 </div>
@@ -123,8 +123,8 @@
               <hr class="my-4" />
 
               <div class="col-md-12 d-flex justify-content-center mt-4">
-                <button class="btn btn-primary me-2" type="submit">Enviar</button>
-                <button class="btn btn-secondary" type="submit">Limpiar</button>
+                <button id= "btnSubmit" class="btn btn-primary me-2" type="submit">Enviar</button>
+                <button id= "btnClear" class="btn btn-secondary" type="submit">Limpiar</button>
               </div>
             </form>
           </div>
@@ -139,6 +139,9 @@
             document.getElementById("footer").innerHTML = html;
           });
       </script>
+      <script src="../public/btnClear.bundle.js"></script>
+      <script src="../public/btnSubmit.bundle.js"></script>
+     
     </div>
   </body>
 </html>

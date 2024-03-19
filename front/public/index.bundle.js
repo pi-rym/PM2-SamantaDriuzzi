@@ -19,13 +19,13 @@ eval("const movieCardsContainer = document.getElementById(\"movieCardsContainer\
 
 /***/ }),
 
-/***/ "./scripts/handler.js":
-/*!****************************!*\
-  !*** ./scripts/handler.js ***!
-  \****************************/
+/***/ "./scripts/getMovie.js":
+/*!*****************************!*\
+  !*** ./scripts/getMovie.js ***!
+  \*****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const cardMovie = __webpack_require__(/*! ./cardMovie */ \"./scripts/cardMovie.js\");\r\n\r\nconst axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\");\r\n\r\n// const promise = axios.get(\" https://students-api.up.railway.app/movies\");\r\n//\r\n// promise\r\n//   .then((response) => {\r\n//     cardMovie(response.data);\r\n//   })\r\n//   .cath((err) => {\r\n//     console.error(err);\r\n//     alert(\"Error: \" + err.message);\r\n//   });\r\n\r\nconst getMovie = async () => {\r\n  try {\r\n    const response = await axios.get(\"http://localhost:3000/movies\");\r\n    cardMovie(response.data);\r\n  } catch (err) {\r\n    //si el error es 404\r\n    if (err.response.status === 404) {\r\n      let fondo = \"../../assets/fondoError.png\";\r\n      document.body.style.backgroundImage = `url('${fondo}')`;\r\n      document.body.style.backgroundSize = \"cover\";\r\n      document.body.style.backgroundRepeat = \"no-repeat\";\r\n    }\r\n    //si no mostrar alerta con el error\r\n    else {\r\n      alert(\"Error: \" + err.message);\r\n    }\r\n  }\r\n};\r\n\r\nmodule.exports = getMovie;\r\n\n\n//# sourceURL=webpack://front/./scripts/handler.js?");
+eval("const cardMovie = __webpack_require__(/*! ./cardMovie */ \"./scripts/cardMovie.js\");\r\n\r\nconst axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\");\r\n\r\nconst getMovie = async () => {\r\n  try {\r\n    const response = await axios.get(\"http://localhost:3000/movies\");\r\n    cardMovie(response.data);\r\n  } catch (err) {\r\n    //si el error es 404\r\n    if (err.response.status === 404) {\r\n      let fondo = \"../../assets/fondoError.png\";\r\n      document.body.style.backgroundImage = `url('${fondo}')`;\r\n      document.body.style.backgroundSize = \"cover\";\r\n      document.body.style.backgroundRepeat = \"no-repeat\";\r\n    }\r\n    //si no mostrar alerta con el error\r\n    else {\r\n      alert(\"Error: \" + err.message);\r\n    }\r\n  }\r\n};\r\n\r\nmodule.exports = getMovie;\r\n\n\n//# sourceURL=webpack://front/./scripts/getMovie.js?");
 
 /***/ }),
 
@@ -35,7 +35,7 @@ eval("const cardMovie = __webpack_require__(/*! ./cardMovie */ \"./scripts/cardM
   \**************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const getFilm = __webpack_require__(/*! ./handler */ \"./scripts/handler.js\");\r\ngetFilm();\r\n\n\n//# sourceURL=webpack://front/./scripts/index.js?");
+eval("const getFilm = __webpack_require__(/*! ./getMovie */ \"./scripts/getMovie.js\");\r\n\r\ngetFilm();\r\n\n\n//# sourceURL=webpack://front/./scripts/index.js?");
 
 /***/ }),
 
