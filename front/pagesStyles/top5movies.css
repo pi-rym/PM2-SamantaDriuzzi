@@ -17,7 +17,7 @@ body {
 }
 .cardMovie {
   width: 200px;
-  height: 300px;
+  height: auto;
   position: relative;
   overflow: hidden;
   display: inline-block;
@@ -43,7 +43,7 @@ body {
 
 .additionalImage {
   position: relative;
-  bottom: 0;
+  bottom: 155px;
   left: 50px;
   width: auto;
   height: 190px;
