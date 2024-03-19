@@ -1,5 +1,5 @@
 const express = require("express");
-const router = require("./routes/getMoviesRouter");
+const router = require("./routes/MoviesRouter");
 
 const cors = require("cors");
 const morgan = require("morgan");
