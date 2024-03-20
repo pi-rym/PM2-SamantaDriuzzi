@@ -1,8 +1,8 @@
 module.exports = {
   entry: {
     index: "./scripts/index.js",
-    btnClear: "./scripts/createMovie/btnClear.js",
-    btnSubmit: "./scripts/createMovie/btnSubmit.js",
+    btnClear: "./scripts/createNewMovie/btnClear.js",
+    btnSubmit: "./scripts/createNewMovie/btnSubmit.js",
   },
   output: {
     path: __dirname + "/public",

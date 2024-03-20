@@ -9,23 +9,23 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./scripts/createMovie/btnClear.js":
-/*!*****************************************!*\
-  !*** ./scripts/createMovie/btnClear.js ***!
-  \*****************************************/
+/***/ "./scripts/createNewMovie/btnClear.js":
+/*!********************************************!*\
+  !*** ./scripts/createNewMovie/btnClear.js ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const clearInputs = __webpack_require__(/*! ./clearInputs */ \"./scripts/createMovie/clearInputs.js\");\r\n\r\nconst btnClear = document.getElementById(\"btnClear\");\r\nbtnClear.addEventListener(\"click\", clearInputs);\r\n\n\n//# sourceURL=webpack://front/./scripts/createMovie/btnClear.js?");
+eval("const clearInputs = __webpack_require__(/*! ./clearInputs */ \"./scripts/createNewMovie/clearInputs.js\");\r\n\r\nconst btnClear = document.getElementById(\"btnClear\");\r\nbtnClear.addEventListener(\"click\", clearInputs);\r\n\n\n//# sourceURL=webpack://front/./scripts/createNewMovie/btnClear.js?");
 
 /***/ }),
 
-/***/ "./scripts/createMovie/clearInputs.js":
-/*!********************************************!*\
-  !*** ./scripts/createMovie/clearInputs.js ***!
-  \********************************************/
+/***/ "./scripts/createNewMovie/clearInputs.js":
+/*!***********************************************!*\
+  !*** ./scripts/createNewMovie/clearInputs.js ***!
+  \***********************************************/
 /***/ ((module) => {
 
-eval("function clearInputs() {\r\n  document.getElementById(\"title\").value = \"\";\r\n  document.getElementById(\"year\").value = \"\";\r\n  document.getElementById(\"director\").value = \"\";\r\n  document.getElementById(\"duration\").value = \"\";\r\n  document.getElementById(\"genre\").value = \"\";\r\n  document.getElementById(\"rate\").value = \"\";\r\n  document.getElementById(\"poster\").value = \"\";\r\n}\r\nmodule.exports = clearInputs;\r\n\n\n//# sourceURL=webpack://front/./scripts/createMovie/clearInputs.js?");
+eval("function clearInputs() {\r\n  document.getElementById(\"title\").value = \"\";\r\n  document.getElementById(\"year\").value = \"\";\r\n  document.getElementById(\"director\").value = \"\";\r\n  document.getElementById(\"duration\").value = \"\";\r\n  document.getElementById(\"genre\").value = \"\";\r\n  document.getElementById(\"rate\").value = \"\";\r\n  document.getElementById(\"poster\").value = \"\";\r\n}\r\nmodule.exports = clearInputs;\r\n\n\n//# sourceURL=webpack://front/./scripts/createNewMovie/clearInputs.js?");
 
 /***/ })
 
@@ -60,7 +60,7 @@ eval("function clearInputs() {\r\n  document.getElementById(\"title\").value = \
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./scripts/createMovie/btnClear.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./scripts/createNewMovie/btnClear.js");
 /******/ 	
 /******/ })()
 ;

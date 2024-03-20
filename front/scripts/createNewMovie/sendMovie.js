@@ -3,7 +3,9 @@
 //  y validar que todos los datos estén completos.
 //  Asumimos para esta actividad que todos los datos son obligatorios.
 
-function createMovie() {
+const axios = require("axios");
+
+function sendMovie() {
   const title = document.getElementById("title").value;
   const year = document.getElementById("year").value;
   const director = document.getElementById("director").value;
@@ -15,7 +17,17 @@ function createMovie() {
   if (!title || !year || !director || !duration || !genre || !rate || !poster) {
     alert("Todos los campos son obligatorios");
   } else {
-    console.log("enviando");
+    axios.post("http://localhost:3000/movies", {
+      title,
+      year,
+      director,
+      duration,
+      genre,
+      rate,
+      poster,
+    });
+
+    alert("Película agregada");
   }
 }
-module.exports = createMovie;
+module.exports = sendMovie;
