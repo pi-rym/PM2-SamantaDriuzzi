@@ -1,8 +1,3 @@
-// Implementar una función que maneje el evento de envío de formulario,
-//  que por el momento se encargará de seleccionar los inputs,
-//  y validar que todos los datos estén completos.
-//  Asumimos para esta actividad que todos los datos son obligatorios.
-
 const axios = require("axios");
 
 function sendMovie() {
@@ -10,24 +5,39 @@ function sendMovie() {
   const year = document.getElementById("year").value;
   const director = document.getElementById("director").value;
   const duration = document.getElementById("duration").value;
-  const genre = document.getElementById("genre").value;
+  const genreCheckboxes = document.querySelectorAll(
+    'input[type="checkbox"][name="genre"]:checked'
+  );
   const rate = document.getElementById("rate").value;
   const poster = document.getElementById("poster").value;
 
-  if (!title || !year || !director || !duration || !genre || !rate || !poster) {
+  if (
+    !title ||
+    !year ||
+    !director ||
+    !duration ||
+    genreCheckboxes.length === 0 ||
+    !rate ||
+    !poster
+  ) {
     alert("Todos los campos son obligatorios");
   } else {
+    const genres = Array.from(genreCheckboxes)
+      .map((checkbox) => checkbox.value)
+      .join(", ");
+
     axios.post("http://localhost:3000/movies", {
       title,
       year,
       director,
       duration,
-      genre,
+      genre: genres,
       rate,
       poster,
     });
 
-    alert("Película agregada");
+    alert("Película agregada. Ya puedes verla en la página del TOP 5!");
   }
 }
+
 module.exports = sendMovie;

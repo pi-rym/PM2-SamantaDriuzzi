@@ -8,15 +8,18 @@ body {
 #movieCardsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 38px;
-  padding: 100px;
+  gap: 60px;
+  margin-right: 50px;
+  padding: 80px;
   justify-items: center;
 }
 .containerCard {
-  width: 400px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
 }
 .cardMovie {
-  width: 200px;
+  width: 170px;
   height: auto;
   position: relative;
   overflow: hidden;
@@ -26,7 +29,7 @@ body {
 .cardMovie > .poster {
   border-radius: 8px;
   width: 100%;
-  height: auto;
+  height: 250px;
   box-shadow: 0px 0px 20px #9c9c9c;
   object-fit: cover;
   opacity: 0.8;
@@ -41,25 +44,30 @@ body {
   margin-top: 30px;
 }
 
-.additionalImage {
+.imgNumber {
   position: relative;
-  bottom: 155px;
-  left: 50px;
+  top: 150px;
+  left: 30px;
   width: auto;
-  height: 190px;
+  height: 100px;
   object-fit: cover;
   opacity: 1;
   transition: opacity 0.3s ease;
 }
 
-.cardMovie:hover .additionalImage {
-  opacity: 0;
+.cardMovie:hover {
+  transform: scale(1.4);
+  z-index: 1;
+  opacity: 1;
 }
-.cardMovie:hover .poster {
+
+.cardMovie:hover > .poster:hover {
   opacity: 1;
 }
 .cardMovie:hover {
-  transform: scale(1.7);
+  .imgNumber {
+    opacity: 0;
+  }
 }
 .error {
   width: 500px;

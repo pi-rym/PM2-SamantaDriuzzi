@@ -27,10 +27,10 @@ const cardMovie = (data) => {
     nameParagraph.classList.add("nameMovie");
     card.appendChild(nameParagraph);
 
-    const additionalImage = document.createElement("img");
-    additionalImage.src = additionalImages[index % additionalImages.length];
-    additionalImage.classList.add("additionalImage");
-    containerCard.appendChild(additionalImage);
+    const imgNumber = document.createElement("img");
+    imgNumber.src = additionalImages[index % additionalImages.length];
+    imgNumber.classList.add("imgNumber");
+    containerCard.appendChild(imgNumber);
 
     containerCard.appendChild(card);
 

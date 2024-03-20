@@ -34,103 +34,135 @@
         </ul>
       </nav>
     </header>
-
     <div class="container text-white mt-5 d-flex justify-content-center ">
- 
-         <!-- FORMULARIO CREAR PELÍCULA -->
-          <div class="col-ms-4 col-lg-8 mt-2">
-            <form id="formContainer" class="bg-dark p-4 rounded">
-              <h3 class="mb-3 d-flex justify-content-center">AGREGÁ TU PROPIA PELÍCULA AL TOP 5!</h3>
+      <!-- FORMULARIO CREAR PELÍCULA -->
+      <div class="col-ms-4 col-lg-8 mt-2">
+        <form id="formContainer" class="bg-dark p-4 rounded">
+          <h3 class="mb-3 d-flex justify-content-center">HAZ QUE TU PELÍCULA FAVORITA ENTRE AL TOP 5!</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="title" class="form-label mt-2">Título</label>
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                id="title"
+                placeholder="Mi película favorita"
+                value=""
+                required=""
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="year" class="form-label mt-2">Año</label>
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                id="year"
+                placeholder="1991"
+                value=""
+                required=""
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="director" class="form-label mt-2">Director</label>
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                id="director"
+                placeholder="Elnum Erouno"
+                required=""
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="duration" class="form-label mt-2">Duración</label>
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                id="duration"
+                placeholder="2h 16min"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="rate" class="form-label mt-2">Rating</label>
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                id="rate"
+                placeholder="9.1"
+                required=""
+                min="1"
+                max="10"
+                step="0.1"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label for="poster" class="form-label mt-2">Url del poster</label>
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                id="poster"
+                placeholder="Url"
+              />
+            </div>
+            <!-- sección generos -->
+            <div class="col-md-12">
+              <label for="genre" class="form-label mt-2">Género</label>
+              <span class="text-dark-emphasis">
+                <font style="vertical-align: inherit">
+                  <font style="vertical-align: inherit">(Selecciona al menos uno)</font>
+                </font>
+              </span>
               <div class="row">
-                <div class="col-md-6">
-                  <label for="title" class="form-label">Título</label>
-                  <input
-                    type="text"
-                    class="form-control form-control-sm"
-                    id="title"
-                    placeholder="Mi película favorita"
-                    value=""
-                    required=""
-                  />
+                <div class="col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="genre" value="Acción" id="genre_accion">
+                    <label class="form-check-label" for="genre_accion">Acción</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="genre" value="Aventura" id="genre_aventura">
+                    <label class="form-check-label" for="genre_aventura">Aventura</label>
+                  </div>
                 </div>
-
-                <div class="col-md-6">
-                  <label for="year" class="form-label">Año</label>
-                  <input
-                    type="text"
-                    class="form-control form-control-sm"
-                    id="year"
-                    placeholder="1991"
-                    value=""
-                    required=""
-                  />
+                <div class="col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="genre" value="Catástrofe" id="genre_catastrofe">
+                    <label class="form-check-label" for="genre_catastrofe">Catástrofe</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="genre"  value="Ciencia Ficción" id="genre_ciencia_ficcion">
+                    <label class="form-check-label" for="genre_ciencia_ficcion">Ciencia Ficción</label>
+                  </div>
                 </div>
-
-                <div class="col-md-6">
-                  <label for="director" class="form-label">Director</label>
-                  <input
-                    type="text"
-                    class="form-control form-control-sm"
-                    id="director"
-                    placeholder="Elnum Erouno"
-                    required=""
-                  />
+                <div class="col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="genre"  value="Drama" id="genre_drama">
+                    <label class="form-check-label" for="genre_drama">Drama</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="genre"  value="Fantasía" id="genre_fantasia">
+                    <label class="form-check-label" for="genre_fantasia">Fantasía</label>
+                  </div>
                 </div>
-
-                <div class="col-md-6">
-                  <label for="duration" class="form-label">Duración</label>
-                  <input
-                    type="text"
-                    class="form-control form-control-sm"
-                    id="duration"
-                    placeholder="2h 16min"
-                  />
-                </div>
-
-                <div class="col-md-6">
-                  <label for="genre" class="form-label">Género</label>
-                  <input
-                    type="text"
-                    class="form-control form-control-sm"
-                    id="genre"
-                    placeholder="Ciencia ficción"
-                    required=""
-                  />
-                </div>
-
-                <div class="col-md-6">
-                  <label for="rate" class="form-label">Rating</label>
-                  <input
-                    type="text"
-                    class="form-control form-control-sm"
-                    id="rate"
-                    placeholder="10"
-                  />
-                </div>
-
-                <div class="col-md-6">
-                  <label for="poster" class="form-label">Url del poster</label>
-                  <input
-                    type="text"
-                    class="form-control form-control-sm"
-                    id="poster"
-                    placeholder="Url"
-                  />
+                <div class="col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="genre"  value="Romance" id="genre_romance">
+                    <label class="form-check-label" for="genre_romance">Romance</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="genre"  value="Comedia" id="genre_comedia">
+                    <label class="form-check-label" for="genre_comedia">Comedia</label>
+                  </div>
                 </div>
               </div>
-
-              <hr class="my-4" />
-              <hr class="my-4" />
-
-              <div class="col-md-12 d-flex justify-content-center mt-4">
-                <button id= "btnSubmit" class="btn btn-primary me-2" type="submit">Enviar</button>
-                <button id= "btnClear" class="btn btn-secondary" type="submit">Limpiar</button>
-              </div>
-            </form>
           </div>
-         </div>
-     
-   
+          <hr class="my-4" />
+          <div class="col-md-12 d-flex justify-content-center mt-4">
+            <button id= "btnSubmit" class="btn btn-primary me-2" type="submit">Enviar</button>
+            <button id= "btnClear" class="btn btn-secondary" type="submit">Limpiar</button>
+          </div>
+        </form>
+      </div>
+      <!-- footer -->
       <div id="footer" class="mt-5"></div>
       <script>
         fetch("footer.html")
@@ -139,9 +171,8 @@
             document.getElementById("footer").innerHTML = html;
           });
       </script>
-      <script src="../public/btnClear.bundle.js"></script>
-      <script src="../public/btnSubmit.bundle.js"></script>
-     
     </div>
+    <script src="../public/btnClear.bundle.js"></script>
+    <script src="../public/btnSubmit.bundle.js"></script>
   </body>
 </html>
