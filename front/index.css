@@ -1,4 +1,3 @@
-/* agregar una imagen de fondo en toda la pagina */
 body {
   background-image: url("./assets/fondoHome.jpg");
   background-attachment: fixed;

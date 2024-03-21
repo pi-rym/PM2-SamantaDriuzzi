@@ -1,6 +1,8 @@
 const axios = require("axios");
 
-function sendMovie() {
+function sendMovie(event) {
+  event.preventDefault();
+
   const title = document.getElementById("title").value;
   const year = document.getElementById("year").value;
   const director = document.getElementById("director").value;

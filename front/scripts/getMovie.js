@@ -7,15 +7,12 @@ const getMovie = async () => {
     const response = await axios.get("http://localhost:3000/movies");
     cardMovie(response.data);
   } catch (err) {
-    //si el error es 404
     if (err.response.status === 404) {
       let fondo = "../../assets/fondoError.png";
       document.body.style.backgroundImage = `url('${fondo}')`;
       document.body.style.backgroundSize = "cover";
       document.body.style.backgroundRepeat = "no-repeat";
-    }
-    //si no mostrar alerta con el error
-    else {
+    } else {
       alert("Error: " + err.message);
     }
   }

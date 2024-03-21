@@ -23,7 +23,7 @@ const cardMovie = (data) => {
     card.appendChild(img);
 
     const nameParagraph = document.createElement("p");
-    nameParagraph.textContent = movie.title;
+    nameParagraph.textContent = movie.title.toUpperCase();
     nameParagraph.classList.add("nameMovie");
     card.appendChild(nameParagraph);
 
@@ -31,6 +31,22 @@ const cardMovie = (data) => {
     imgNumber.src = additionalImages[index % additionalImages.length];
     imgNumber.classList.add("imgNumber");
     containerCard.appendChild(imgNumber);
+
+    const detailsContainer = document.createElement("div");
+    detailsContainer.classList.add("detailsContainer");
+    card.appendChild(detailsContainer);
+
+    const directorParagraph = document.createElement("p");
+    directorParagraph.textContent = `Director: ${movie.director}`;
+    detailsContainer.appendChild(directorParagraph);
+
+    const yearParagraph = document.createElement("p");
+    yearParagraph.textContent = `Año: ${movie.year}`;
+    detailsContainer.appendChild(yearParagraph);
+
+    const genresParagraph = document.createElement("p");
+    genresParagraph.textContent = `Géneros: ${movie.genre.join(", ")}`;
+    detailsContainer.appendChild(genresParagraph);
 
     containerCard.appendChild(card);
 
